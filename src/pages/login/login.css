@@ -1,0 +1,183 @@
+body {
+    margin: 0;
+    background: #f0f2f5;
+    /* 페이지 바깥 배경 회색 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.login-page {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    background: #fff;
+    border-radius: 34px;
+    max-width: 430px;
+    min-height: 850px;
+    border: 1px solid rgba(137, 185, 224, 0.24);
+    box-shadow: 0 18px 48px 0 rgba(73, 128, 180, 0.14);
+    /* X:0 Y:18 흐림:48 색:#4980B4 14% */
+
+}
+
+.back-Button-wrapper {
+    width: 382px;
+    height: 38px;
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.back-Button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+
+.back-Button img {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+/* 로그인글자 */
+.title-section {
+    width: 382px;
+    height: 75px;
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-section h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 900;
+    color: #173556;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.title-section p {
+    margin: 14px 0 0 0;
+    font-size: 12px;
+    font-weight: 400;
+    color: #66819a;
+    line-height: 1.2;
+    white-space: normal;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 아이디비번 */
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.field-id {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+.field-password {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    /* 비밀번호는 여기서 마진 관리 안 함 */
+}
+
+.field-id label,
+.field-password label {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #4A6C85;
+    margin-bottom: 10px;
+}
+
+.field-id input,
+.field-password input {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    padding: 12.5px 15px;
+    border: 1.5px solid #DCE9F5;
+    border-radius: 15px;
+    outline: none;
+    color: #173556;
+}
+
+.field-id input::placeholder,
+.field-password input::placeholder {
+    color: #b0bac5;
+}
+
+.field-id input:focus,
+.field-password input:focus {
+    border-color: #1a73e8;
+}
+
+.forgot-password {
+    align-self: flex-end;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #A9B8C5;
+    text-decoration: none;
+    margin-top: 11px;
+}
+
+/*밑에 버튼3개*/
+
+.bottom-actions {
+    display: flex;
+    flex-direction: column;
+    /* 남은 공간 다 밀어서 하단 고정 */
+}
+
+.btn-primary {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 19px;
+    font-weight: 900;
+    color: #fff;
+    background: #0080F1;
+    border: 1px solid #D7EBFF;
+    border-radius: 17px;
+    padding: 17px;
+    cursor: pointer;
+    margin-bottom: 11px;
+    margin-top: 257px;
+}
+
+.btn-secondary {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 19px;
+    font-weight: 900;
+    color: #0B85DF;
+    background: #F5FAFF;
+    border: 1px solid #D7EBFF;
+    border-radius: 17px;
+    padding: 17px;
+    cursor: pointer;
+    margin-bottom: 11px;
+}
+
+.btn-text {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 19px;
+    font-weight: 900;
+    color: #597E9A;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    align-self: center;
+    margin-top: 17px;
+}

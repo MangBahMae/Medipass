@@ -1,0 +1,177 @@
+.signup-page {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    background: #fff;
+    border-radius: 34px;
+    max-width: 430px;
+    min-height: 850px;
+    border: 1px solid rgba(137, 185, 224, 0.24);
+    box-shadow: 0 18px 48px 0 rgba(73, 128, 180, 0.14);
+}
+
+.signup-back-Button-wrapper {
+    width: 382px;
+    height: 38px;
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.signup-back-Button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+
+.signup-back-Button img {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+/* 회원가입 타이틀 */
+.signup-title-section {
+    width: 382px;
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-title-section h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 900;
+    color: #173556;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.signup-title-section p {
+    margin: 14px 0 0 0;
+    font-size: 12px;
+    font-weight: 400;
+    color: #66819a;
+    line-height: 1.2;
+    white-space: normal;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 입력 필드들 - 아이디/비번/비번확인/닉네임 */
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 18px;
+}
+
+.signup-field-id,
+.signup-field-password,
+.signup-field-password-confirm,
+.signup-field-nickname {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+.signup-field-id label,
+.signup-field-password label,
+.signup-field-password-confirm label,
+.signup-field-nickname label {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #4A6C85;
+    margin-bottom: 10px;
+}
+
+.signup-field-id input,
+.signup-field-password input,
+.signup-field-password-confirm input,
+.signup-field-nickname input {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 12.5px 15px;
+    border: 1.5px solid #DCE9F5;
+    border-radius: 15px;
+    outline: none;
+    color: #A9B8C5;
+}
+
+.signup-field-id input::placeholder,
+.signup-field-password input::placeholder,
+.signup-field-password-confirm input::placeholder,
+.signup-field-nickname input::placeholder {
+    color: #b0bac5;
+}
+
+.signup-field-id input:focus,
+.signup-field-password input:focus,
+.signup-field-password-confirm input:focus,
+.signup-field-nickname input:focus {
+    border-color: #1a73e8;
+}
+
+/* 약관 동의 - 동그란 토글 버튼 */
+
+.signup-agreement {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #A9B8C5;
+    cursor: pointer;
+    margin-top: 4px;
+}
+
+.signup-agreement-checkbox-input {
+    display: none;
+}
+
+.signup-agreement-checkbox {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #DCE9F5;
+    display: inline-block;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: background 0.15s;
+    margin-left: 12px;
+}
+
+.signup-agreement-checkbox--checked {
+    background: #0080F1;
+}
+
+/* 회원가입 버튼 */
+
+.signup-bottom-actions {
+    display: flex;
+    flex-direction: column;
+    margin-top: 142px;
+}
+
+.signup-btn-primary {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 19px;
+    font-weight: 900;
+    color: #fff;
+    background: #0080F1;
+    border: 1px solid #D7EBFF;
+    border-radius: 17px;
+    padding: 0;
+    width: 382px;
+    height: 58px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
