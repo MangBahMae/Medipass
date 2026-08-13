@@ -1,0 +1,193 @@
+.pl-page {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    background: #fff;
+    border-radius: 34px;
+    max-width: 430px;
+    min-height: 850px;
+    border: 1px solid rgba(137, 185, 224, 0.24);
+    box-shadow: 0 18px 48px 0 rgba(73, 128, 180, 0.14);
+    font-family: 'Noto Sans KR', sans-serif;
+    box-sizing: border-box;
+}
+
+/* 상단 뒤로가기 + 뱃지 */
+
+.pl-back-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 382px;
+    height: 38px;
+    box-sizing: border-box;
+}
+
+.pl-back-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+
+.pl-back-btn img {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+.pl-badge {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #66819a;
+}
+
+/* 타이틀 */
+
+.pl-title-section {
+    width: 382px;
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pl-title-section h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 900;
+    color: #173556;
+}
+
+.pl-title-section p {
+    margin: 10px 0 0 0;
+    font-size: 12px;
+    font-weight: 400;
+    color: #66819a;
+}
+
+/* 바깥 컨테이너 - 테두리, 배경, 둥근 모서리 담당 */
+.pl-list-wrapper {
+    width: 382px;
+    margin-top: 18px;
+    padding: 16px;
+    background: #fff;
+    border: 1.5px solid #DCE9F5;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+/* 안쪽 컨테이너 - 카드들 간격만 담당 (허그) */
+.pl-list {
+    width: 329px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* 개별 카드 - 아이콘 + 오른쪽 컨테이너 */
+.pl-card {
+    display: flex;
+    align-items: flex-start;
+}
+
+.pl-card-icon {
+    width: 114px;
+    height: 129px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* 오른쪽 전체 컨테이너 - 텍스트블록 + 버튼을 가로로 배치 */
+.pl-card-right {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex: 1;
+    margin: 26px 0px 26px 18px;
+}
+
+/* 텍스트 블록 - 140 x 77 허그 */
+.pl-card-text {
+    width: 140px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pl-card-text h3 {
+    margin: 0;
+    width: 140px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    font-weight: 900;
+    color: #000000;
+    line-height: 1;
+    letter-spacing: -0.5px;
+}
+
+.pl-card-text p {
+    margin: 0px 0 0 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    color: #728498;
+    line-height: 1;
+    letter-spacing: -0.5px;
+}
+
+.pl-card-usage {
+    color: #8b9bab;
+}
+
+.pl-select-btn {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -0.5px;
+    color: #0080F1;
+    background: #EEF6FF;
+    border: 1px solid rgba(44, 114, 216, 0.5);
+    border-radius: 15px;
+    width: 57px;
+    height: 32px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+/* 하단 Notice */
+
+.pl-notice {
+    width: 382px;
+    margin-top: 20px;
+}
+
+.pl-notice-title {
+    margin: 0 0 5px 0;
+    font-size: 11px;
+    font-weight: 400;
+    color: #b0bac5;
+}
+
+.pl-notice-box {
+    width: 382px;
+    /* 352px → 382px로 수정 */
+    padding: 14px 15px;
+    background: #EEF7FF;
+    border: 1px solid #D7EBFF;
+    border-radius: 17px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #49708F;
+    line-height: 1.65;
+    letter-spacing: 0;
+    box-sizing: border-box;
+    margin-top: 48px;
+}
