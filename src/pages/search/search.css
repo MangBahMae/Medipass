@@ -1,0 +1,216 @@
+.search-page {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    background: #fff;
+    border-radius: 34px;
+    max-width: 430px;
+    min-height: 850px;
+    border: 1px solid rgba(137, 185, 224, 0.24);
+    box-shadow: 0 18px 48px 0 rgba(73, 128, 180, 0.14);
+    font-family: 'Noto Sans KR', sans-serif;
+    box-sizing: border-box;
+}
+
+/* 상단 뒤로가기 + 메뉴 */
+
+.search-back-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 382px;
+}
+
+.search-back-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+
+.search-back-btn img {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+.search-menu-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    color: #173556;
+}
+
+/* 타이틀 영역 */
+
+.search-title-section {
+    width: 382px;
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.search-title-section h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 900;
+    color: #173556;
+}
+
+.search-title-section p {
+    margin: 10px 0 0 0;
+    font-size: 12px;
+    font-weight: 400;
+    color: #66819a;
+
+}
+
+/* 탭 버튼 */
+
+.search-tab-buttons {
+    display: flex;
+    gap: 5px;
+    margin-top: 18px;
+    background: #F2F8FF;
+    padding: 5px;
+    border: 1px solid #E2ECF6;
+    border-radius: 16px;
+    width: 382px;
+    box-sizing: border-box;
+}
+
+.search-tab-btn {
+    flex: 1;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 13px;
+    font-weight: 900;
+    text-align: center;
+    padding: 11px 8px;
+    border: none;
+    border-radius: 12px;
+    background: transparent;
+    color: #66819a;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.search-tab-btn--active {
+    background: #2C82EF;
+    color: #fff;
+    box-shadow: 0 7px 16px 0 rgba(58, 143, 247, 0.18);
+}
+
+/* 입력 필드 (제품명, 현재 증상, 국가 공통) */
+
+.search-field {
+    display: flex;
+    flex-direction: column;
+    width: 382px;
+    margin-top: 18px;
+}
+
+.search-field label {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #5B7895;
+    margin-bottom: 18px;
+}
+
+.search-field input {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 00;
+    padding: 15px 15px;
+    border: 1.5px solid #DCE9F5;
+    border-radius: 18px;
+    outline: none;
+    color: #173556;
+    box-sizing: border-box;
+}
+
+.search-field input::placeholder {
+    color: #A9B8C5;
+}
+
+.search-field input:focus {
+    border-color: #1a73e8;
+}
+
+.search-country-input {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* 증상 태그 */
+
+.search-symptom-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    width: 382px;
+    margin-top: 18px;
+}
+
+.search-tag {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: #526B82;
+    background: #F8FBFE;
+    border: 1px solid #DFEAF4;
+    padding: 9px 13px;
+    border-radius: 999px;
+}
+
+/* 경고 박스 */
+
+.search-warning-box {
+    width: 382px;
+    margin-top: 18px;
+    padding: 16px 16px;
+    background: #FFF9EE;
+    border: 1px solid #FFBF004D;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #B39D8C;
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+
+/* 검색 버튼 */
+
+.search-submit-btn {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 19px;
+    font-weight: 900;
+    line-height: 1.24;
+    /* 행간 124% */
+    letter-spacing: -0.8px;
+    /* 자간 */
+    color: #fff;
+    background: #0080F1;
+    border: 1px solid #D7EBFF;
+    border-radius: 17px;
+    width: 382px;
+    height: 58px;
+    padding: 0;
+    /* height로 고정하니까 padding 대신 flex로 중앙정렬 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.search-submit-btn--medication {
+    margin-top: 288px;
+}
+
+.search-submit-btn--symptom {
+    margin-top: 163px;
+}

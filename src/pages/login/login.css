@@ -180,4 +180,5 @@ body {
     padding: 0;
     align-self: center;
     margin-top: 17px;
+    box-sizing: border-box;
 }
