@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import backIcon from '../../assets/backIcon.svg';
+import SideMenu from '../../components/sideMenu/sideMenu.jsx';
 import './search.css';
 
 function SearchPage() {

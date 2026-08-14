@@ -1,0 +1,99 @@
+.cs-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    background: #fff;
+    border-radius: 34px;
+    max-width: 430px;
+    min-height: 850px;
+    border: 1px solid rgba(137, 185, 224, 0.24);
+    box-shadow: 0 18px 48px 0 rgba(73, 128, 180, 0.14);
+    font-family: 'Noto Sans KR', sans-serif;
+    box-sizing: border-box;
+}
+
+/* 체크 아이콘 */
+
+.cs-check-icon {
+    margin: 108px 90px 28px 84px;
+    width: 208px;
+    height: 194px;
+    display: block;
+}
+
+/* 타이틀 + 설명 */
+
+.cs-title {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 900;
+    color: #173556;
+    text-align: center;
+    line-height: 1.24;
+    letter-spacing: -0.8px;
+}
+
+.cs-desc {
+    margin: 19px 0 0 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: #4A6C85;
+    text-align: center;
+    line-height: 1;
+    letter-spacing: 0;
+}
+
+/* 미리보기 카드 */
+
+.cs-preview-card {
+    width: 382px;
+    height: 96px;
+    margin-top: 32px;
+    padding: 16px 18px;
+    background: #fff;
+    border: 1.5px solid #DCE9F5;
+    border-radius: 18px;
+    box-sizing: border-box;
+}
+
+.cs-preview-meta {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000000;
+    line-height: 1;
+    letter-spacing: -0.5px;
+}
+
+.cs-preview-text {
+    margin: 11px 0 0 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #859DAD;
+    line-height: 1;
+    letter-spacing: -0.5px;
+}
+
+/* 하단 버튼 */
+
+.cs-btn-primary {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 19px;
+    font-weight: 900;
+    color: #fff;
+    background: #0080F1;
+    border: 1px solid #D7EBFF;
+    border-radius: 17px;
+    width: 382px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: auto;
+    box-sizing: border-box;
+    margin-bottom: 84px;
+    line-height: 1.24;
+    letter-spacing: -0.8px;
+}

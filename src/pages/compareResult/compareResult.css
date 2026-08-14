@@ -1,0 +1,222 @@
+.cr-page {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    background: #fff;
+    border-radius: 34px;
+    max-width: 430px;
+    min-height: 850px;
+    border: 1px solid rgba(137, 185, 224, 0.24);
+    box-shadow: 0 18px 48px 0 rgba(73, 128, 180, 0.14);
+    font-family: 'Noto Sans KR', sans-serif;
+    box-sizing: border-box;
+}
+
+/* 뒤로가기 */
+
+.cr-back-wrapper {
+    width: 382px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.cr-back-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+
+.cr-back-btn img {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+/* 타이틀 */
+
+.cr-title {
+    margin: 28px 0 0 0;
+    width: 382px;
+    font-size: 30px;
+    font-weight: 900;
+    color: #173556;
+    line-height: 1.24;
+    letter-spacing: -0.8px;
+}
+
+/* 상태 배지 (초록) */
+
+.cr-status-box {
+    width: 382px;
+    margin-top: 19px;
+    padding: 14px 15px;
+    background: #EAF9F2;
+    border-radius: 17px;
+    box-sizing: border-box;
+    border: 1px solid #D5F3E4;
+}
+
+.cr-status-title {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 900;
+    color: #000000;
+    line-height: 1.65;
+    letter-spacing: 0;
+}
+
+.cr-status-desc {
+    margin: 0px 0 0 0;
+    font-size: 11px;
+    font-weight: 400;
+    color: #448B6C;
+    line-height: 1.65;
+}
+
+/* 정보 카드 (바깥) */
+
+.cr-info-box {
+    width: 382px;
+
+    margin-top: 28px;
+    background: #fff;
+    border: 1.5px solid #DCE9F5;
+    border-radius: 18px;
+    box-sizing: border-box;
+}
+
+/* 헤더 컨테이너 - 성분명 부분 */
+.cr-info-header {
+    margin: 38px 181px 27px 33px;
+    width: 188px;
+}
+
+.cr-info-header-text {
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #000000;
+    line-height: 22px;
+    letter-spacing: -0.5px;
+}
+
+.cr-info-header-highlight {
+    font-weight: 900;
+    font-size: 17px;
+    letter-spacing: -0.5px;
+    line-height: 22px;
+    color: #008A55;
+}
+
+/* 리스트 컨테이너 - 319 x 150 허그 */
+.cr-info-list {
+    width: 319px;
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+    margin: 27px 50px 48px 33px;
+}
+
+.cr-info-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cr-info-label {
+    font-size: 16px;
+    font-weight: 900;
+    color: #859DAD;
+    line-height: 1;
+    letter-spacing: -0.5px;
+}
+
+.cr-info-value {
+    font-size: 15px;
+    font-weight: 700;
+    color: #000000;
+    text-align: right;
+    line-height: 1;
+    letter-spacing: -0.5px;
+    /* 미국제품 글이 길어지면 고쳐야하는데 */
+}
+
+/* 경고 박스 (노랑) */
+
+.cr-warning-box {
+    width: 382px;
+    margin-top: 38px;
+    padding: 14px 15px;
+    background: #FFF7DD;
+    border: 1px solid #FFE6A5;
+    border-radius: 17px;
+    font-size: 11px;
+    font-weight: 400;
+    color: #976B0D;
+    line-height: 1.65;
+    box-sizing: border-box;
+}
+
+/* 안내 문구 */
+
+.cr-disclaimer {
+    width: 352px;
+    margin: 22px 0 0 0;
+    font-size: 11px;
+    font-weight: 700;
+    color: #9CB3C3;
+    line-height: 1.65;
+}
+
+/* 하단 버튼들 */
+
+.cr-bottom-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-top: auto;
+    margin-bottom: 17px;
+}
+
+.cr-btn-primary {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    font-weight: 900;
+    color: #fff;
+    background: #0C9CFF;
+    border: 1px solid #D7EBFF;
+    border-radius: 17px;
+    width: 382px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    line-height: 1.24;
+    letter-spacing: -0.8px;
+}
+
+.cr-btn-secondary {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    font-weight: 900;
+    color: #0082DE;
+    background: #F5FAFF;
+    border: 1px solid #D7EBFF;
+    border-radius: 17px;
+    width: 382px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    line-height: 1.24;
+    letter-spacing: -0.8px;
+}

@@ -1,0 +1,99 @@
+.splash-page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 430px;
+    height: 850px;
+    border-radius: 34px;
+    border: 1px solid rgba(137, 185, 224, 0.24);
+    background: #F9FCFF;
+    box-shadow: 0 18px 48px 0 rgba(73, 128, 180, 0.14);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* 배경 흐린 원 - 상단 */
+.splash-blur-circle-top {
+    position: absolute;
+    width: 460px;
+    height: 460px;
+    top: -200px;
+    left: 210px;
+    background: #CFE7FF;
+    opacity: 0.55;
+    border-radius: 50%;
+    filter: blur(90px);
+    z-index: 0;
+}
+
+/* 배경 흐린 원 - 하단 */
+.splash-blur-circle-bottom {
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    top: 560px;
+    left: -160px;
+    background: #E7F3FF;
+    opacity: 0.6;
+    border-radius: 50%;
+    filter: blur(90px);
+    z-index: 0;
+}
+
+/* 가운데 로고 + 텍스트 */
+
+.splash-center {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.splash-logo {
+    width: 120px;
+    height: 120px;
+    display: block;
+}
+
+.splash-title {
+    margin: 20px 0 0 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 26px;
+    font-weight: 900;
+    color: #173556;
+    line-height: 1;
+    letter-spacing: -0.5px;
+}
+
+.splash-subtitle {
+    margin: 8px 0 0 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: #718397;
+    line-height: 1;
+    letter-spacing: 0px;
+}
+
+/* 하단 진행바 */
+
+.splash-progress-track {
+    z-index: 1;
+    position: absolute;
+    bottom: 86px;
+    width: 140px;
+    height: 4px;
+    background: #EAF1F7;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.splash-progress-bar {
+    height: 100%;
+    background: #3A8FF7;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
