@@ -1,0 +1,163 @@
+.pd-page {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    background: #fff;
+    border-radius: 34px;
+    max-width: 430px;
+    min-height: 850px;
+    border: 1px solid rgba(137, 185, 224, 0.24);
+    box-shadow: 0 18px 48px 0 rgba(73, 128, 180, 0.14);
+    font-family: 'Noto Sans KR', sans-serif;
+    box-sizing: border-box;
+}
+
+/* 뒤로가기 */
+
+.pd-back-wrapper {
+    width: 382px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.pd-back-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+
+.pd-back-btn img {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+/* 상단 헤더 - 아이콘 + 뱃지 + 제품명 */
+
+.pd-header {
+    display: flex;
+    align-items: flex-start;
+}
+
+.pd-header-icon {
+    width: 112px;
+    height: 141px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.pd-header-text {
+    display: flex;
+    flex-direction: column;
+    margin-top: 45px;
+    margin-bottom: 45px;
+    width: 289px;
+}
+
+.pd-header-badge {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 500;
+    color: #728498;
+    line-height: 1;
+    letter-spacing: -0.5px;
+}
+
+.pd-header-text h1 {
+    margin: 10px 0 0 0;
+    font-size: 20px;
+    font-weight: 900;
+    color: #173556;
+    line-height: 1;
+    letter-spacing: -0.5px;
+    width: 289px;
+}
+
+/* 정보 테이블 */
+
+.pd-info-box {
+    width: 382px;
+    height: 307px;
+    margin-top: 49px;
+    padding: 38px 33px 86px 33px;
+    background: #fff;
+    border: 1.5px solid #DCE9F5;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+
+/* 안쪽 컨테이너 - 줄 간격만 담당 (허그) */
+.pd-info-list {
+    width: 315px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.pd-info-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pd-info-label {
+    font-size: 16px;
+    font-weight: 900;
+    color: #859DAD;
+    line-height: 1;
+    letter-spacing: -0.5px;
+}
+
+.pd-info-value {
+    font-size: 16px;
+    font-weight: 700;
+    color: #173556;
+    line-height: 1;
+    letter-spacing: -0.5px;
+}
+
+/* 안내 문구 */
+
+.pd-notice-box {
+    width: 382px;
+    margin-top: 50px;
+    padding: 14px 15px;
+    background: #EEF7FF;
+    border-radius: 17px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #49708F;
+    line-height: 1.65;
+    letter-spacing: 0;
+    box-sizing: border-box;
+    border: 1px solid #D7EBFF
+}
+
+/* 비교하기 버튼 */
+
+.pd-compare-btn {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 19px;
+    font-weight: 900;
+    color: #fff;
+    background: #0080F1;
+    border: 1px solid #D7EBFF;
+    border-radius: 17px;
+    cursor: pointer;
+    width: 382px;
+    margin-top: 86px;
+    box-sizing: border-box;
+    line-height: 1.24;
+    letter-spacing: -0.8px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 58px;
+}

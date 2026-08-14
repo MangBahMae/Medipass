@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import SideMenu from '../../components/sideMenu/sideMenu.jsx';
 import './home.css';
 
 function HomePage() {
     const [mode, setMode] = useState('medication');
+    const [isMenuOpen, setIsMenuOpen] = useState(false); {/* 추가 1 */ }
 
     return (
         <div className="home-page">
@@ -11,7 +13,7 @@ function HomePage() {
                     <span className="home-logo-icon">+</span>
                     <span>약쏙</span>
                 </div>
-                <button className="home-menu-icon">☰</button>
+                <button className="home-menu-icon" onClick={() => setIsMenuOpen(true)}>☰</button>   {/* 추가 2 */}
             </header>
 
             <div className="home-greeting-section">
@@ -68,6 +70,8 @@ function HomePage() {
             <div className="home-disclaimer-box">
                 이 서비스는 의약품을 진단·처방·추천하지 않습니다. 실제 복용 전에는 의사 또는 약사에게 확인하세요.
             </div>
+
+            <SideMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />   {/* 추가 3 */}
         </div>
     );
 }
