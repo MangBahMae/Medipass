@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import backIcon from '../../assets/backIcon.svg';
-import medIcon from '../../assets/medIcon.svg';  // 파일명은 실제 파일명에 맞춰서
+import medIcon from '../../assets/medIcon.svg';
 import './result.css';
 
 const medications = [
@@ -25,6 +25,12 @@ const medications = [
 ];
 
 function ResultPage() {
+    const navigate = useNavigate();
+
+    const handleSelect = (id) => {
+        navigate(`/product-detail/${id}`, { state: { from: 'result' } });
+    };
+
     return (
         <div className="result-page">
             <div className="result-back-wrapper">
@@ -42,16 +48,18 @@ function ResultPage() {
             <div className="result-list-wrapper">
                 <div className="result-list">
                     {medications.map((med) => (
-                        <div className="result-card">
+                        <div className="result-card" key={med.id}>
                             <img src={medIcon} alt="약품 아이콘" className="result-card-icon" />
 
-                            <div className="result-card-right">           {/* 오른쪽 전체 컨테이너 */}
-                                <div className="result-card-text">           {/* 140×77 허그 */}
+                            <div className="result-card-right">
+                                <div className="result-card-text">
                                     <h3>{med.name}</h3>
                                     <p>핵심 성분: {med.ingredient}</p>
                                     <p className="result-card-usage">{med.usage}</p>
                                 </div>
-                                <button className="result-select-btn">선택</button>
+                                <button className="result-select-btn" onClick={() => handleSelect(med.id)}>
+                                    선택
+                                </button>
                             </div>
                         </div>
                     ))}

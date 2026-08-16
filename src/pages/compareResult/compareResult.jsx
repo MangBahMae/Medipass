@@ -1,18 +1,48 @@
+import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import backIcon from '../../assets/backIcon.svg';
 import './compareResult.css';
 
-const compareInfo = [
-    { label: '내 약', value: '타이레놀 500mg' },
-    { label: '미국 제품', value: 'Tylenol Regular Strength 325mg' },
-    { label: '제형', value: '정제 ↔ 정제' },
-    { label: '한 번에 표시된 양', value: '500mg ↔ 500mg' },
-];
+// TODO: 백엔드 연동 시 productDetail의 productData와 통합하거나 API로 대체
+const productNames = {
+    1: 'Tylenol Extra Strength 500mg',
+    2: 'Tylenol Regular Strength 325mg',
+    3: "Children's Tylenol 160mg/5mL",
+};
+
+// TODO: 팀원이 "내 복용약 선택" 화면 만들면, 거기서 선택한 약을 여기로 대체
+const myMedication = '타이레놀 500mg';
 
 function CompareResultPage() {
+    const { id } = useParams();
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from || 'result';
+
+    const usProductName = productNames[id] || 'Tylenol Regular Strength 325mg';
+
+    const compareInfo = [
+        { label: '내 약', value: myMedication },
+        { label: '미국 제품', value: usProductName },
+        { label: '제형', value: '정제 ↔ 정제' },
+        { label: '한 번에 표시된 양', value: '500mg ↔ 500mg' },
+    ];
+
+    const handleQuestionCard = () => {
+        navigate('/pharmacist-card');
+    };
+
+    const handleCompareAgain = () => {
+        if (from === 'productList') {
+            navigate('/product-list');
+        } else {
+            navigate('/result');
+        }
+    };
+
     return (
         <div className="cr-page">
             <div className="cr-back-wrapper">
-                <button className="cr-back-btn">
+                <button className="cr-back-btn" onClick={() => navigate(-1)}>
                     <img src={backIcon} alt="뒤로가기" />
                 </button>
             </div>
@@ -51,8 +81,8 @@ function CompareResultPage() {
             </p>
 
             <div className="cr-bottom-actions">
-                <button className="cr-btn-primary">약사 질문 카드 만들기</button>
-                <button className="cr-btn-secondary">다른 제품 비교하기</button>
+                <button className="cr-btn-primary" onClick={handleQuestionCard}>약사 질문 카드 만들기</button>
+                <button className="cr-btn-secondary" onClick={handleCompareAgain}>다른 제품 비교하기</button>
             </div>
         </div>
     );

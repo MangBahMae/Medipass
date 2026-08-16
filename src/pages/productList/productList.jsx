@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import backIcon from '../../assets/backIcon.svg';
 import medIcon from '../../assets/medIcon.svg';
 import './productList.css';
@@ -24,6 +25,12 @@ const medications = [
 ];
 
 function ProductListPage({ symptom = '두통' }) {
+    const navigate = useNavigate();
+
+    const handleSelect = (id) => {
+        navigate(`/product-detail/${id}`, { state: { from: 'productList' } });
+    };
+
     return (
         <div className="pl-page">
             <div className="pl-back-wrapper">
@@ -50,7 +57,9 @@ function ProductListPage({ symptom = '두통' }) {
                                     <p>핵심 성분: {med.ingredient}</p>
                                     <p className="pl-card-usage">{med.usage}</p>
                                 </div>
-                                <button className="pl-select-btn">선택</button>
+                                <button className="pl-select-btn" onClick={() => handleSelect(med.id)}>
+                                    선택
+                                </button>
                             </div>
                         </div>
                     ))}

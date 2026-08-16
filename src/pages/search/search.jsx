@@ -1,10 +1,21 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import backIcon from '../../assets/backIcon.svg';
 import SideMenu from '../../components/sideMenu/sideMenu.jsx';
 import './search.css';
 
 function SearchPage() {
     const [mode, setMode] = useState('medication');
+    const navigate = useNavigate();
+
+    const handleSearch = () => {
+        // TODO: 백엔드 연동 시 여기서 입력값(제품명/증상 등)을 쿼리로 넘겨야 함
+        if (mode === 'medication') {
+            navigate('/result');
+        } else {
+            navigate('/product-list');
+        }
+    };
 
     return (
         <div className="search-page">
@@ -72,6 +83,7 @@ function SearchPage() {
 
             <button
                 className={`search-submit-btn ${mode === 'medication' ? 'search-submit-btn--medication' : 'search-submit-btn--symptom'}`}
+                onClick={handleSearch}
             >
                 검색하기
             </button>

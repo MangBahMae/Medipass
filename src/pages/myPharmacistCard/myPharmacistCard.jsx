@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import backIcon from '../../assets/backIcon.svg';
 import arrowRightIcon from '../../assets/arrowRightIcon.svg';
 import SideMenu from '../../components/sideMenu/sideMenu.jsx';
@@ -30,11 +31,17 @@ const cardData = [
 
 function MyPharmacistCardPage() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const navigate = useNavigate();
+
+    const handleCardClick = (id) => {
+        // TODO: 백엔드 연동 시 저장된 카드 상세를 이 id로 조회
+        navigate(`/pharmacist-card`, { state: { cardId: id } });
+    };
 
     return (
         <div className="mpc-page">
             <div className="mpc-top-wrapper">
-                <button className="mpc-back-btn">
+                <button className="mpc-back-btn" onClick={() => navigate(-1)}>
                     <img src={backIcon} alt="뒤로가기" />
                 </button>
                 <button className="mpc-menu-icon" onClick={() => setIsMenuOpen(true)}>☰</button>
@@ -47,7 +54,11 @@ function MyPharmacistCardPage() {
 
             <div className="mpc-card-list">
                 {cardData.map((card) => (
-                    <button className="mpc-card" key={card.id}>
+                    <button
+                        className="mpc-card"
+                        key={card.id}
+                        onClick={() => handleCardClick(card.id)}
+                    >
                         <div className="mpc-card-left">
                             <div className="mpc-card-header">
                                 <span className="mpc-card-flag">{card.flag}</span>
