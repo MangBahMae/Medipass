@@ -9,7 +9,9 @@ import ProductListPage from './pages/productList/productList.jsx'
 import ProductDetailPage from './pages/productDetail/productDetail.jsx'
 import CompareResultPage from './pages/compareResult/compareResult.jsx'
 import PharmacistCardPage from './pages/pharmacistCard/pharmacistCard.jsx'
+import MyPharmacistCardPage from './pages/myPharmacistCard/myPharmacistCard.jsx'
 import CardSavedPage from './pages/cardSaved/cardSaved.jsx'
+import MyInfoPage from './pages/myInfo/myInfo.jsx'
 import './App.css'
 
 function App() {
@@ -26,7 +28,9 @@ function App() {
         <Route path="/product-detail" element={<ProductDetailPage />} />
         <Route path="/compare-result" element={<CompareResultPage />} />
         <Route path="/pharmacist-card" element={<PharmacistCardPage />} />
+        <Route path="/my-pharmacist-card" element={<MyPharmacistCardPage />} />
         <Route path="/card-saved" element={<CardSavedPage />} />
+        <Route path="/my-info" element={<MyInfoPage />} />
       </Routes>
     </BrowserRouter>
   )
