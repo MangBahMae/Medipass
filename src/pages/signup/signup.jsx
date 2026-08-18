@@ -1,9 +1,17 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import backIcon from '../../assets/backIcon.svg';
 import './signup.css';
 
 function SignupPage() {
     const [agreed, setAgreed] = useState(false);
+    const navigate = useNavigate();
+
+    const handleSignup = (e) => {
+        e.preventDefault();
+        // TODO: 백엔드 연동 시 여기서 회원가입 API 호출 후 성공 시 navigate
+        navigate('/login');
+    };
 
     return (
         <div className="signup-page">
@@ -21,7 +29,7 @@ function SignupPage() {
                 </p>
             </div>
 
-            <form className="signup-form">
+            <form id="signup-form" className="signup-form" onSubmit={handleSignup}>
                 <div className="signup-field-id">
                     <label>아이디(이메일)</label>
                     <input type="email" placeholder="example@email.com" />
@@ -52,7 +60,7 @@ function SignupPage() {
             </form>
 
             <div className="signup-bottom-actions">
-                <button className="signup-btn-primary">회원가입</button>
+                <button type="submit" form="signup-form" className="signup-btn-primary">회원가입</button>
             </div>
         </div>
     );

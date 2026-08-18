@@ -1,7 +1,14 @@
+import { useNavigate } from 'react-router-dom';
 import checkIcon from '../../assets/checkIcon.svg';
 import './cardSaved.css';
 
 function CardSavedPage() {
+    const navigate = useNavigate();
+
+    const handleViewCards = () => {
+        navigate('/my-pharmacist-card');
+    };
+
     return (
         <div className="cs-page">
             <img src={checkIcon} alt="저장 완료" className="cs-check-icon" />
@@ -19,7 +26,7 @@ function CardSavedPage() {
                 </p>
             </div>
 
-            <button className="cs-btn-primary">내 카드함 보기</button>
+            <button className="cs-btn-primary" onClick={handleViewCards}>내 카드함 보기</button>
         </div>
     );
 }

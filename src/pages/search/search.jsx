@@ -1,18 +1,37 @@
 import { useState } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import backIcon from '../../assets/backIcon.svg';
 import SideMenu from '../../components/sideMenu/sideMenu.jsx';
 import './search.css';
 
 function SearchPage() {
-    const [mode, setMode] = useState('medication');
+    const location = useLocation();
+    const [mode, setMode] = useState(location.state?.mode || 'medication');
+    const [productName, setProductName] = useState(
+        location.state?.mode === 'medication' ? (location.state?.query || '') : ''
+    );
+    const [symptomText, setSymptomText] = useState(
+        location.state?.mode === 'symptom' ? (location.state?.query || '') : ''
+    );
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const navigate = useNavigate();
+
+    const handleSearch = () => {
+        // TODO: 백엔드 연동 시 여기서 입력값(제품명/증상 등)을 쿼리로 넘겨야 함
+        if (mode === 'medication') {
+            navigate('/result');
+        } else {
+            navigate('/product-list');
+        }
+    };
 
     return (
         <div className="search-page">
             <div className="search-back-wrapper">
-                <button className="search-back-btn">
+                <button className="search-back-btn" onClick={() => navigate(-1)}>
                     <img src={backIcon} alt="뒤로가기" />
                 </button>
-                <button className="search-menu-icon">☰</button>
+                <button className="search-menu-icon" onClick={() => setIsMenuOpen(true)}>☰</button>
             </div>
 
             <div className="search-title-section">
@@ -38,13 +57,23 @@ function SearchPage() {
             {mode === 'medication' ? (
                 <div className="search-field">
                     <label>제품명</label>
-                    <input type="text" placeholder="예) Tylenol" />
+                    <input
+                        type="text"
+                        placeholder="예) Tylenol"
+                        value={productName}
+                        onChange={(e) => setProductName(e.target.value)}
+                    />
                 </div>
             ) : (
                 <>
                     <div className="search-field">
                         <label>현재 증상</label>
-                        <input type="text" placeholder="예) 두통" />
+                        <input
+                            type="text"
+                            placeholder="예) 두통"
+                            value={symptomText}
+                            onChange={(e) => setSymptomText(e.target.value)}
+                        />
                     </div>
 
                     <div className="search-symptom-tags">
@@ -72,9 +101,12 @@ function SearchPage() {
 
             <button
                 className={`search-submit-btn ${mode === 'medication' ? 'search-submit-btn--medication' : 'search-submit-btn--symptom'}`}
+                onClick={handleSearch}
             >
                 검색하기
             </button>
+
+            <SideMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
         </div>
     );
 }

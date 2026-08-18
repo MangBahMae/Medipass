@@ -25,8 +25,8 @@ function App() {
         <Route path="/search" element={<SearchPage />} />
         <Route path="/result" element={<ResultPage />} />
         <Route path="/product-list" element={<ProductListPage />} />
-        <Route path="/product-detail" element={<ProductDetailPage />} />
-        <Route path="/compare-result" element={<CompareResultPage />} />
+        <Route path="/product-detail/:id" element={<ProductDetailPage />} />
+        <Route path="/compare-result/:id" element={<CompareResultPage />} />
         <Route path="/pharmacist-card" element={<PharmacistCardPage />} />
         <Route path="/my-pharmacist-card" element={<MyPharmacistCardPage />} />
         <Route path="/card-saved" element={<CardSavedPage />} />

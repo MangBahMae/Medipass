@@ -1,19 +1,32 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import BrandMark from '../../assets/BrandMark.svg';
 import SideMenu from '../../components/sideMenu/sideMenu.jsx';
 import './home.css';
 
 function HomePage() {
     const [mode, setMode] = useState('medication');
-    const [isMenuOpen, setIsMenuOpen] = useState(false); {/* 추가 1 */ }
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [searchInput, setSearchInput] = useState('');
+    const navigate = useNavigate();
+
+    const handleSearch = () => {
+        navigate('/search', {
+            state: {
+                mode,
+                query: searchInput,
+            },
+        });
+    };
 
     return (
         <div className="home-page">
             <header className="home-header">
                 <div className="home-logo">
-                    <span className="home-logo-icon">+</span>
-                    <span>약쏙</span>
+                    <img src={BrandMark} alt="약쏙 로고" className="home-logo-img" />
+                    <span>MediPass</span>
                 </div>
-                <button className="home-menu-icon" onClick={() => setIsMenuOpen(true)}>☰</button>   {/* 추가 2 */}
+                <button className="home-menu-icon" onClick={() => setIsMenuOpen(true)}>☰</button>
             </header>
 
             <div className="home-greeting-section">
@@ -42,8 +55,13 @@ function HomePage() {
                     className="home-search-input"
                     type="text"
                     placeholder={mode === 'medication' ? '어떤 약을 드시고 있나요?' : '어떤 증상이 있나요?'}
+                    value={searchInput}
+                    onChange={(e) => setSearchInput(e.target.value)}
+                    onKeyDown={(e) => {
+                        if (e.key === 'Enter') handleSearch();
+                    }}
                 />
-                <button className="home-search-submit">→</button>
+                <button className="home-search-submit" onClick={handleSearch}>→</button>
             </div>
 
             {mode === 'symptom' && (
@@ -71,7 +89,7 @@ function HomePage() {
                 이 서비스는 의약품을 진단·처방·추천하지 않습니다. 실제 복용 전에는 의사 또는 약사에게 확인하세요.
             </div>
 
-            <SideMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />   {/* 추가 3 */}
+            <SideMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
         </div>
     );
 }
