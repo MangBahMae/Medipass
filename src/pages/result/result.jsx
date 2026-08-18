@@ -34,7 +34,7 @@ function ResultPage() {
     return (
         <div className="result-page">
             <div className="result-back-wrapper">
-                <button className="result-back-btn">
+                <button className="result-back-btn" onClick={() => navigate(-1)}>
                     <img src={backIcon} alt="뒤로가기" />
                 </button>
                 <span className="result-badge">미국.일반약품</span>

@@ -41,7 +41,7 @@ function MyPharmacistCardPage() {
     return (
         <div className="mpc-page">
             <div className="mpc-top-wrapper">
-                <button className="mpc-back-btn" onClick={() => navigate(-1)}>
+                <button className="mpc-back-btn" onClick={() => navigate('/home')}>
                     <img src={backIcon} alt="뒤로가기" />
                 </button>
                 <button className="mpc-menu-icon" onClick={() => setIsMenuOpen(true)}>☰</button>
